@@ -1,4 +1,5 @@
-/* Shared stylesheet for prathamjain.com product pages — Marc Lou / shipfa.st style */
+/* Shared stylesheet for prathamjain.com product pages — Pratham's own brand:
+   dark Marc Lou structure + his blue→violet→blue headline gradient */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:wght@400;600&display=swap');
 
 :root {
@@ -8,11 +9,9 @@
   --text: #CFCFCF;
   --text-bright: #FFFFFF;
   --muted: #8a8a8a;
-  --amber: #FFBE18;
-  --amber-dark: #131313;
-  --green: #51A800;
-  --cream: #D2CBC6;
-  --cream-text: #2E1A05;
+  --blue: #2f6bff;
+  --violet: #7c5cff;
+  --grad: linear-gradient(100deg, var(--blue), var(--violet), var(--blue));
   --radius: 8px;
 }
 
@@ -39,7 +38,7 @@ body {
   text-decoration: none;
   font-size: 15px;
 }
-.back:hover { color: var(--amber); }
+.back:hover { color: var(--violet); }
 
 /* Hero */
 .hero {
@@ -64,7 +63,7 @@ body {
 .badge .dot {
   display: inline-block;
   width: 8px; height: 8px;
-  background: var(--green);
+  background: var(--violet);
   border-radius: 50%;
   margin-right: 8px;
 }
@@ -80,11 +79,19 @@ h1 {
 
 .hl {
   display: inline-block;
-  background: var(--cream);
-  color: var(--cream-text);
+  background: var(--grad);
+  background-size: 200% auto;
+  color: #fff;
   padding: 0 12px;
   border-radius: 4px;
   transform: rotate(-1deg);
+  animation: grad-pan 7s linear infinite;
+}
+@keyframes grad-pan {
+  to { background-position: 200% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hl, .btn { animation: none; }
 }
 
 .sub {
@@ -97,8 +104,9 @@ h1 {
 /* Buttons */
 .btn {
   display: inline-block;
-  background: var(--amber);
-  color: var(--amber-dark);
+  background: var(--grad);
+  background-size: 200% auto;
+  color: #fff;
   font-family: inherit;
   font-weight: 700;
   font-size: 1.05rem;
@@ -110,15 +118,18 @@ h1 {
   text-align: center;
   border: none;
   cursor: pointer;
+  animation: grad-pan 7s linear infinite;
+  transition: filter 0.15s ease;
 }
-.btn:hover { filter: brightness(1.08); }
+.btn:hover { filter: brightness(1.12); }
 .btn-ghost {
   background: transparent;
   color: var(--text);
   border: 1px solid #3a3a3a;
   margin-left: 12px;
+  animation: none;
 }
-.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+.btn-ghost:hover { border-color: var(--violet); color: var(--violet); filter: none; }
 
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 28px; }
 .btn-ghost { margin-left: 0; }
@@ -130,7 +141,7 @@ h1 {
   font-size: 14px;
   color: var(--muted);
 }
-.proof strong { color: var(--green); font-size: 1.4rem; display: block; font-weight: 800; }
+.proof strong { color: var(--violet); font-size: 1.4rem; display: block; font-weight: 800; }
 
 /* Product visual (right side of hero) */
 .shot {
@@ -154,8 +165,8 @@ h1 {
   color: var(--text);
   white-space: pre-wrap;
 }
-.shot .k { color: var(--green); }
-.shot .a { color: var(--amber); }
+.shot .k { color: var(--violet); }
+.shot .a { color: var(--blue); }
 
 /* Sections */
 .section { padding: 64px 0; }
@@ -181,13 +192,13 @@ h1 {
 .feature .tag {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
-  color: var(--green);
+  color: var(--violet);
   margin-bottom: 8px;
 }
 .feature h3 { color: var(--text-bright); font-size: 1.25rem; font-weight: 700; margin-bottom: 6px; }
 .feature p { color: var(--text); }
 .feature ul { list-style: none; margin-top: 14px; display: grid; gap: 8px; }
-.feature ul li::before { content: "✓ "; color: var(--green); font-weight: 700; }
+.feature ul li::before { content: "✓ "; color: var(--violet); font-weight: 700; }
 
 /* Steps */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
@@ -199,7 +210,7 @@ h1 {
   padding: 28px;
 }
 .step .n {
-  font-size: 2rem; font-weight: 800; color: var(--amber); margin-bottom: 10px;
+  font-size: 2rem; font-weight: 800; color: var(--violet); margin-bottom: 10px;
 }
 .step h3 { color: var(--text-bright); margin-bottom: 6px; }
 
@@ -216,7 +227,7 @@ footer {
   font-size: 14px;
 }
 footer a { color: var(--muted); }
-footer a:hover { color: var(--amber); }
+footer a:hover { color: var(--violet); }
 
-a { color: var(--amber); }
+a { color: var(--blue); }
 .mono { font-family: 'JetBrains Mono', monospace; }
