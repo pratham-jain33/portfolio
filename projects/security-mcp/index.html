@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>security-mcp — Ask your AI if a website is secure</title>
+<meta name="description" content="MCP server: grade any site's security A+ to F, check CVEs, get MITRE ATT&CK defenses in plain English. Zero API keys.">
+<link rel="stylesheet" href="../product.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="https://prathamjain.com">← prathamjain.com</a>
+
+  <header class="hero">
+    <div>
+      <span class="badge"><span class="dot"></span>Open source · zero keys needed</span>
+      <h1>Is this site <span class="hl">secure?</span> Just ask.</h1>
+      <p class="sub">🔒 security-mcp gives your AI three security tools: grade any website's HTTPS setup from A+ to F, check if a CVE is actively exploited, and get MITRE ATT&CK defenses explained like a human. No API keys. No signup. It just works.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://pypi.org/project/security-mcp/">Install from PyPI</a>
+        <a class="btn btn-ghost" href="https://github.com/pratham-jain33/security-mcp">GitHub</a>
+      </div>
+      <div class="proof">
+        <div><strong>0</strong>API keys required</div>
+        <div><strong>3</strong>tools</div>
+        <div><strong>53</strong>tests passing</div>
+      </div>
+    </div>
+    <div class="shot" aria-hidden="true">
+      <div class="bar"><span></span><span></span><span></span></div>
+      <div class="mock"><span class="k">→ audit_site</span>("example-shop.com")
+
+<span class="a">Grade: C</span>
+✗ TLS 1.0 still enabled
+✗ Missing HSTS header
+✓ Certificate valid
+
+<span class="k">→ check_cve</span>("CVE-2024-1234")
+<span class="a">In CISA KEV — exploited in the wild.</span>
+Patch now.</div>
+    </div>
+  </header>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Three tools. Zero keys.</h2>
+    <p class="lede">Every data source is free and public. That's the whole trick.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="tag">// audit_site</div>
+        <h3>🛡️ Grade any website A+ to F</h3>
+        <p>Point it at a domain. Get a plain-English report on its TLS, headers, and certificate.</p>
+        <ul>
+          <li>Checks protocols, ciphers, HSTS, cert validity</li>
+          <li>Explains what's wrong and why it matters</li>
+          <li>Great for "is this checkout page safe?" questions</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <div class="tag">// check_cve</div>
+        <h3>🚨 Is this CVE actually dangerous?</h3>
+        <p>Cross-references CISA's Known Exploited Vulnerabilities list and EPSS scores.</p>
+        <ul>
+          <li>"Exploited in the wild" vs "theoretical" — instantly</li>
+          <li>Plain-English severity, no CVSS decoder ring needed</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <div class="tag">// lookup_attack</div>
+        <h3>🥷 MITRE ATT&CK, translated</h3>
+        <p>Look up any attack technique and get its defenses explained without the jargon.</p>
+        <ul>
+          <li>Real technique IDs, real mitigations</li>
+          <li>Written for humans, not SOC analysts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section deep">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">No keys means no step two.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>📦 Install</h3><p class="mono">pip install security-mcp</p></div>
+      <div class="step"><div class="n">2</div><h3>🔌 Plug in</h3><p>Add it to Claude Desktop's config. That's it — there's no step 3.</p></div>
+      <div class="step"><div class="n">3</div><h3>❓ Ask</h3><p>"Audit example.com" or "is CVE-2024-1234 exploited?" Done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Security answers without the <span class="hl">jargon.</span></h2>
+    <p>Free forever. No keys, no signup, no excuses.</p>
+    <a class="btn" href="https://pypi.org/project/security-mcp/">Install from PyPI</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Built by <a href="https://prathamjain.com">Pratham Jain</a> · <a href="https://github.com/pratham-jain33/security-mcp">GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

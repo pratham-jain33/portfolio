@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hackerearth-mcp — Give any AI assistant a code run button</title>
+<meta name="description" content="MCP server: run code in 24 languages from inside Claude or any MCP client. Free HackerEarth sandbox.">
+<link rel="stylesheet" href="../product.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="https://prathamjain.com">← prathamjain.com</a>
+
+  <header class="hero">
+    <div>
+      <span class="badge"><span class="dot"></span>Open source · PyPI</span>
+      <h1>Give your AI a <span class="hl">run button.</span></h1>
+      <p class="sub">💻 hackerearth-mcp plugs into Claude Desktop (or any MCP client) and adds one tool: <span class="mono">run_code</span>. Your AI writes code, runs it in HackerEarth's sandbox, sees the output, fixes its mistakes. 24 languages. No setup beyond a free API key.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://pypi.org/project/hackerearth-mcp/">Install from PyPI</a>
+        <a class="btn btn-ghost" href="https://github.com/pratham-jain33/hackerearth-mcp">GitHub</a>
+      </div>
+      <div class="proof">
+        <div><strong>24</strong>languages</div>
+        <div><strong>2</strong>tools, nothing more</div>
+        <div><strong>1000</strong>free runs / month</div>
+      </div>
+    </div>
+    <div class="shot" aria-hidden="true">
+      <div class="bar"><span></span><span></span><span></span></div>
+      <div class="mock"><span class="k">claude:</span> "let me test that"
+<span class="k">→ run_code</span>(language="python",
+  source="print(sum(range(101)))")
+
+<span class="a">✓ output:</span> 5050
+<span class="k">→ run_code</span>(language="rust",
+  source="fn main()…")
+
+<span class="a">✓ output:</span> compiled in 0.8s</div>
+    </div>
+  </header>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Two tools. That's the whole API.</h2>
+    <p class="lede">MCP servers should be boring. This one does exactly two things, well.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="tag">// run_code</div>
+        <h3>▶️ Execute anything</h3>
+        <p>Send source code, get stdout, stderr, and timing back. Python to Rust to Haskell.</p>
+        <ul>
+          <li>24 languages via HackerEarth's sandbox</li>
+          <li>Your AI can iterate: run, read error, fix, re-run</li>
+          <li>1000 free runs + 1000 compiles a month</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <div class="tag">// list_languages</div>
+        <h3>📜 Know what's available</h3>
+        <p>Ask what languages the sandbox supports before writing a line.</p>
+        <ul>
+          <li>Version info for every language</li>
+          <li>No guessing, no failed runs</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <div class="tag">// five-minute-setup</div>
+        <h3>⚡ Install in one command</h3>
+        <p>pip install, paste your free HackerEarth key, add one JSON block to Claude Desktop.</p>
+        <ul>
+          <li class="mono">pip install hackerearth-mcp</li>
+          <li>Free key from hackerearth.com in 2 minutes</li>
+          <li>Published on the official MCP registry</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section deep">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">From zero to running code inside your AI in three steps.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>📦 Install</h3><p class="mono">pip install hackerearth-mcp</p></div>
+      <div class="step"><div class="n">2</div><h3>🔑 Key</h3><p>Grab a free HackerEarth API key. Set it once.</p></div>
+      <div class="step"><div class="n">3</div><h3>🔌 Plug in</h3><p>Add the server to Claude Desktop's config. Ask it to run something.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Stop copy-pasting code into <span class="hl">playgrounds.</span></h2>
+    <p>Let your AI run it where the conversation already is.</p>
+    <a class="btn" href="https://pypi.org/project/hackerearth-mcp/">Install from PyPI</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Built by <a href="https://prathamjain.com">Pratham Jain</a> · <a href="https://github.com/pratham-jain33/hackerearth-mcp">GitHub</a>
+  </div>
+</footer>
+</body>
+</html>
