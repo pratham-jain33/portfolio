@@ -186,7 +186,7 @@
           io.unobserve(en.target);
         }
       });
-    }, { threshold: 0.35 }) : null;
+    }, { threshold: 0.6, rootMargin: "-12% 0px -12% 0px" }) : null;
 
   function animateSig(el) {
     if (reduceMotion) return;
