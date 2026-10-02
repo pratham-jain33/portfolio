@@ -1,350 +1,113 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>pratham jain — solo builder · student</title>
-    <meta name="description" content="Personal site of Pratham Jain — solo builder & student based in Bengaluru, IN.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Firebase App & Realtime Database SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-    <!-- EmailJS SDK for 2-step verification -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratham Jain</title>
+<meta name="description" content="Pratham Jain — solo builder and student in Bengaluru. I build things and write about it in public.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
-
 <body>
 
-    <!-- CursorGrid Interactive Background Container -->
-    <div id="cursor-grid" class="cursor-grid"></div>
+<main class="page">
 
-    <!-- Light / Dark Mode Toggle (Top Right) -->
-    <header class="top-bar">
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
-            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2"></path>
-                <path d="M12 20v2"></path>
-                <path d="m4.93 4.93 1.41 1.41"></path>
-                <path d="m17.66 17.66 1.41 1.41"></path>
-                <path d="M2 12h2"></path>
-                <path d="M20 12h2"></path>
-                <path d="m6.34 17.66-1.41 1.41"></path>
-                <path d="m19.07 4.93-1.41 1.41"></path>
-            </svg>
-            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-            </svg>
-        </button>
-    </header>
+  <h1>Pratham Jain</h1>
 
-    <!-- Main Viewport Layout -->
-    <div class="viewport-layout">
+  <p class="bio">
+    Solo builder and school student in Bengaluru. I build software on a laptop
+    and a phone with zero budget, and I build in public on
+    <a href="https://x.com/prathamjain33">X</a> and
+    <a href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
+  </p>
 
-        <!-- Top Left Header Info -->
-        <section class="hero-section">
-            <p class="greeting">hey, i'm</p>
-            <h1 class="author-name text-pressure" id="author-name">pratham jain</h1>
-            <p class="author-role">solo builder - solo isn't alone</p>
-        </section>
+  <ul class="timeline">
+    <li>School student. My parents want me studying for IIT and boards. I build instead. First revenue is my leverage.</li>
+    <li>Started with browser extensions. <strong>VoiceMail Pro</strong> drafts emails fast (~200 users). <strong>Carbolt</strong> makes your carbon footprint visible across food, water, and fuel (~600 users).</li>
+    <li>Built <strong>Bolo</strong>, a voice layer for Windows. Then pivoted it into <strong>Bolo Doctor</strong> — voice-based patient notes for small clinics, dictated in Hindi, Kannada, Hinglish, or English.</li>
+    <li>Built <strong>KeySync</strong> because I could never learn the left hand from piano tutorials. Paste a YouTube link, get falling notes, practice with mic wait-mode.</li>
+    <li>Ship MCP servers for fun: <strong>hackerearth-mcp</strong> gives any AI assistant a code run button in 24 languages; <strong>security-mcp</strong> grades website security and explains CVEs in plain English.</li>
+    <li>Operating model: build constantly, ship constantly. Restless by default.</li>
+  </ul>
 
-        <!-- Content Sections -->
-        <main class="content-sections">
+  <h2>Stuff</h2>
 
-            <!-- NOW Section -->
-            <div class="section-group">
-                <h2 class="section-label">NOW</h2>
-                <div class="section-content">
-                    <a href="#" data-project="buddyfrvr" class="item-entry project-trigger">
-                        <span class="item-symbol">❖</span>
-                        <span class="item-title">buddyfrvr</span>
-                    </a>
-                </div>
-            </div>
+  <ul class="stuff">
+    <li>
+      <a href="https://github.com/pratham-jain33/Bolo">Bolo Doctor</a>
+      — voice-based patient notes for small Indian clinics. Doctor dictates, gets a clean note.
+    </li>
+    <li>
+      <a href="https://keysync-23c2.onrender.com">KeySync</a>
+      — learn piano from YouTube tutorials. Falling notes plus mic wait-mode practice.
+      (<a href="https://github.com/pratham-jain33/keysync">github</a>)
+    </li>
+    <li>
+      <a href="https://github.com/pratham-jain33/hackerearth-mcp">hackerearth-mcp</a>
+      — run code in 24 languages from any AI assistant.
+      (<a href="https://pypi.org/project/hackerearth-mcp/">pypi</a>)
+    </li>
+    <li>
+      <a href="https://github.com/pratham-jain33/security-mcp">security-mcp</a>
+      — audit a site's security, check CVEs, MITRE ATT&amp;CK defenses in plain English.
+      (<a href="https://pypi.org/project/security-mcp/">pypi</a>)
+    </li>
+    <li>
+      <strong>VoiceMail Pro</strong>
+      — browser extension for quick email drafts. ~200 users.
+    </li>
+    <li>
+      <strong>Carbolt</strong>
+      — see your carbon footprint across food, water, and fuel. ~600 users.
+    </li>
+    <li>
+      Older experiments, still hosted here:
+      <a href="projects/mocode/">mocode</a>,
+      <a href="projects/utransfer/">utransfer</a>,
+      <a href="projects/volume-master-max/">volume-master-max</a>,
+      <a href="projects/whisper/">whisper</a>.
+    </li>
+  </ul>
 
-            <!-- PREVIOUSLY Section -->
-            <div class="section-group">
-                <h2 class="section-label">PREVIOUSLY</h2>
-                <div class="section-content vertical-list">
-                    <a href="#" data-project="carbolt" class="item-entry project-trigger">
-                        <span class="item-symbol">⬡</span>
-                        <span class="item-title">carbolt</span>
-                    </a>
-                    <a href="#" data-project="voicemail pro" class="item-entry project-trigger">
-                        <span class="item-symbol">⬡</span>
-                        <span class="item-title">voicemail pro</span>
-                    </a>
-                    <a href="#" data-project="utransfer" class="item-entry project-trigger">
-                        <span class="item-symbol">⬡</span>
-                        <span class="item-title">utransfer</span>
-                    </a>
-                </div>
-            </div>
+  <h2>Writing</h2>
 
-            <!-- ELSEWHERE Section -->
-            <div class="section-group">
-                <h2 class="section-label">ELSEWHERE</h2>
-                <div class="section-content horizontal-links">
-                    <a href="https://github.com/pratham-jain33" target="_blank" rel="noopener" class="link-item">github
-                        <span class="arrow">↗</span></a>
-                    <a href="https://x.com/realPrathamJain" target="_blank" rel="noopener" class="link-item">x.com <span
-                            class="arrow">↗</span></a>
-                    <a href="https://www.linkedin.com/in/prathamjain33" target="_blank" rel="noopener"
-                        class="link-item">linkedin <span class="arrow">↗</span></a>
-                </div>
-            </div>
+  <p>
+    No blog. I build in public — find the running commentary on
+    <a href="https://x.com/prathamjain33">X</a> and
+    <a href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
+  </p>
 
-            <!-- THINGS Section -->
-            <div class="section-group">
-                <h2 class="section-label">THINGS</h2>
-                <div class="section-content things-list">
+  <h2>Guestbook</h2>
 
-                    <div class="thing-row">
-                        <a href="/projects/whisper/" class="thing-title">whisper <span class="arrow">↗</span></a>
-                        <span class="thing-desc">fluffless texting</span>
-                    </div>
-                    <div class="thing-row">
-                        <a href="#" data-project="prythm" class="thing-title project-trigger">prythm <span
-                                class="arrow">↗</span></a>
-                        <span class="thing-desc">music production</span>
-                    </div>
-                    <div class="thing-row">
-                        <a href="/projects/mocode/" class="thing-title">mocode <span class="arrow">↗</span></a>
-                        <span class="thing-desc">morse code for the deaf / blind</span>
-                    </div>
-                </div>
-            </div>
+  <p class="muted">Say hi. Be nice.</p>
 
-        </main>
+  <form id="guestbook-form" class="guestbook-form" autocomplete="off">
+    <input id="guestbook-name" type="text" maxlength="40" placeholder="your name" required>
+    <textarea id="guestbook-message" maxlength="500" rows="3" placeholder="your message" required></textarea>
+    <button type="submit">sign the guestbook</button>
+    <p id="guestbook-status" class="muted small" aria-live="polite"></p>
+  </form>
 
-        <!-- Bottom Status Bar -->
-        <footer class="bottom-bar">
-            <div class="bottom-left">
-                <button id="music-player-btn" class="status-btn music-btn" title="Play amahuk by prythm">
-                    <svg class="music-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M9 18V5l12-2v13"></path>
-                        <circle cx="6" cy="18" r="3"></circle>
-                        <circle cx="18" cy="16" r="3"></circle>
-                    </svg>
-                    <span class="eq-waves">
-                        <span class="bar bar-1"></span>
-                        <span class="bar bar-2"></span>
-                        <span class="bar bar-3"></span>
-                    </span>
-                    <span class="music-text">amahuk by prythm</span>
-                </button>
+  <ul id="guestbook-entries" class="guestbook-entries"></ul>
+  <p id="guestbook-empty" class="muted">No entries yet. Yours could be first.</p>
 
-                <div class="status-item location-item">
-                    <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span class="location-text">bengaluru, in</span>
-                </div>
-            </div>
+  <footer>
+    <p>
+      <a href="https://github.com/pratham-jain33">github</a> ·
+      <a href="https://x.com/prathamjain33">x</a> ·
+      <a href="https://www.linkedin.com/in/prathamjain33">linkedin</a>
+    </p>
+    <img class="ghchart" src="https://ghchart.rshah.org/pratham-jain33" alt="Pratham's GitHub contribution graph" loading="lazy">
+    <p class="muted small">(yes, I still code as a student)</p>
+  </footer>
 
-            <div class="bottom-right">
-                <span class="stat-badge"><span id="load-time">0000 ms</span></span>
-                <span class="stat-badge"><span id="visit-count">04683</span></span>
-                <span class="stat-badge"><span id="online-count">001 online</span></span>
-            </div>
-        </footer>
+</main>
 
-    </div>
+<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 
-    <!-- PROJECT POPUP OVERLAY -->
-    <div id="project-modal" class="project-modal hidden" aria-hidden="true">
-        <div class="modal-top-bar">
-            <button id="close-modal" class="back-home-btn">
-                <span class="back-arrow">←</span> home
-            </button>
-            <span class="project-status-tag" id="modal-status">• LIVE</span>
-            <div class="top-spacer"></div>
-        </div>
-
-        <div class="modal-scroll-body">
-            <header class="modal-header">
-                <h1 class="modal-title" id="modal-title">fuzzyrice</h1>
-                <p class="modal-subtitle" id="modal-subtitle">a full replacement of the MacOS UI</p>
-                <p class="modal-tagline" id="modal-tagline">built in swift · inspired by sketchybar ↗</p>
-            </header>
-
-            <div class="modal-showcase-grid" id="modal-showcase">
-                <div class="showcase-card tall-card card-left" id="showcase-card-1">
-                    <div class="card-inner-graphic graphic-1"></div>
-                </div>
-                <div class="showcase-middle-stack">
-                    <div class="showcase-card wide-card card-top" id="showcase-card-2">
-                        <div class="card-inner-graphic graphic-2"></div>
-                    </div>
-                    <div class="showcase-card wide-card card-bottom" id="showcase-card-3">
-                        <div class="card-inner-graphic graphic-3"></div>
-                    </div>
-                </div>
-                <div class="showcase-card tall-card card-right" id="showcase-card-4">
-                    <div class="card-inner-graphic graphic-4"></div>
-                </div>
-            </div>
-
-            <div class="modal-music-player hidden" id="modal-music-player">
-                <div class="music-player-container">
-                    <div class="music-art-wrapper">
-                        <div class="music-needle"></div>
-                        <div class="music-art-disc">
-                            <div class="disc-label">
-                                <div class="disc-hole"></div>
-                                <span class="label-text">PRYTHM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="music-song-info">
-                        <h3 id="modal-song-name">amahuk</h3>
-                        <p id="modal-artist-name">prythm</p>
-                    </div>
-                    <div class="music-controls">
-                        <div class="music-playback-buttons">
-                            <button id="modal-prev-btn" class="modal-control-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
-                                </svg>
-                            </button>
-                            <button id="modal-play-btn" class="modal-play-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="currentColor" class="icon-play">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="currentColor" class="icon-pause hidden">
-                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                                </svg>
-                            </button>
-                            <button id="modal-next-btn" class="modal-control-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="music-progress-wrapper">
-                            <span id="music-current-time" class="music-time">0:00</span>
-                            <div class="music-progress-bar" id="music-progress-bar">
-                                <div class="music-progress-fill" id="music-progress-fill"></div>
-                            </div>
-                            <span id="music-total-time" class="music-time">0:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- WAITLIST SECTION FOR BUDDYFRVR -->
-            <div class="modal-waitlist hidden" id="modal-waitlist">
-                <div class="waitlist-card">
-                    <div class="waitlist-header-row">
-                        <div class="waitlist-badge-group">
-                            <span class="waitlist-dot">•</span>
-                            <span class="waitlist-badge-title">EARLY ACCESS WAITLIST</span>
-                        </div>
-                        <div class="waitlist-counter-badge" id="waitlist-counter-badge">
-                            <span class="waitlist-counter-num" id="waitlist-count">0000</span>
-                            <span class="waitlist-counter-text">joined</span>
-                        </div>
-                    </div>
-
-                    <p class="waitlist-desc">
-                        join the early access queue for <strong>buddyfrvr</strong>. we require 2-step email verification to prevent spam and fake entries.
-                    </p>
-
-                    <!-- Feedback message box -->
-                    <div class="waitlist-alert hidden" id="waitlist-alert"></div>
-
-                    <!-- STEP 1: Email Input Form -->
-                    <form id="waitlist-step1-form" class="waitlist-form-step">
-                        <div class="waitlist-input-group">
-                            <label for="waitlist-email-input" class="waitlist-input-label">enter your email</label>
-                            <div class="waitlist-input-row">
-                                <input type="email" id="waitlist-email-input" class="waitlist-text-input" placeholder="name@example.com" autocomplete="email" required />
-                                <button type="submit" id="waitlist-step1-btn" class="waitlist-submit-btn">
-                                    <span class="btn-text">request code</span>
-                                    <span class="btn-arrow">→</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- STEP 2: Verification Code (OTP) Form -->
-                    <form id="waitlist-step2-form" class="waitlist-form-step hidden">
-                        <div class="waitlist-otp-container">
-                            <div class="waitlist-otp-header">
-                                <span class="waitlist-input-label">enter 6-digit verification code sent to <strong id="sent-email-display">user@example.com</strong></span>
-                                <button type="button" id="change-email-btn" class="waitlist-link-btn">change email</button>
-                            </div>
-                            
-                            <div class="otp-inputs-row">
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="0" inputmode="numeric" required />
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="1" inputmode="numeric" required />
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="2" inputmode="numeric" required />
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="3" inputmode="numeric" required />
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="4" inputmode="numeric" required />
-                                <input type="text" maxlength="1" pattern="[0-9]" class="otp-digit" data-index="5" inputmode="numeric" required />
-                            </div>
-
-                            <div class="waitlist-step2-actions">
-                                <button type="submit" id="waitlist-step2-btn" class="waitlist-submit-btn full-width">
-                                    <span class="btn-text">verify & join waitlist</span>
-                                    <span class="btn-arrow">✓</span>
-                                </button>
-                                <div class="waitlist-resend-row">
-                                    <span id="resend-timer-text" class="resend-timer">resend code in <span id="resend-countdown">60</span>s</span>
-                                    <button type="button" id="resend-code-btn" class="waitlist-link-btn hidden">resend code</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- STEP 2.5: Verifying Spinner Screen -->
-                    <div id="waitlist-verifying-view" class="waitlist-verifying-container hidden">
-                        <div class="verifying-spinner"></div>
-                        <h4 class="verifying-title">verifying email code...</h4>
-                        <p class="verifying-sub">checking 2-step security token against database</p>
-                    </div>
-
-                    <!-- STEP 3: Verification Success State -->
-                    <div id="waitlist-success-view" class="waitlist-success-container hidden">
-                        <div class="success-icon-badge">✓</div>
-                        <h3 class="success-title">you're on the list!</h3>
-                        <p class="success-desc">
-                            your email <strong id="verified-email-display">user@example.com</strong> has been verified and saved to the waitlist.
-                        </p>
-                        <div class="success-footer">
-                            <span class="success-status-tag">• VERIFIED</span>
-                            <span class="success-spot-tag">position #<span id="user-waitlist-spot">1</span></span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hidden Audio for Music Button -->
-    <audio id="amahuk-audio" src="assets/music/amahuk.mp3" preload="metadata"></audio>
-
-    <script src="cursor-grid.js"></script>
-    <script src="script.js"></script>
+<script src="cursor.js"></script>
+<script src="guestbook.js"></script>
 </body>
-
 </html>

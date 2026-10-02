@@ -1,0 +1,1 @@
+{"rules":{"guestbook":{"$entry":{".validate":"newData.hasChildren(['name', 'message', 'ts']) && newData.child('name').isString() && newData.child('name').val().length > 0 && newData.child('name').val().length <= 40 && newData.child('message').isString() && newData.child('message').val().length > 0 && newData.child('message').val().length <= 500",".write":true},".read":true}}}
