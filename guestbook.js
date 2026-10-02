@@ -13,7 +13,7 @@
 (function () {
   "use strict";
 
-  var FIREBASE_API_KEY = "PASTE_YOUR_FIREBASE_API_KEY";
+  var FIREBASE_API_KEY = "AIzaSyCVOgAx5YKSonVzHNxSD1ntzb6V0_ZHJAg";
 
   var form = document.getElementById("guestbook-form");
   var canvas = document.getElementById("gb-canvas");
