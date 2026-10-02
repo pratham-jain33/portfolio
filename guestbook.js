@@ -61,6 +61,22 @@
     redraw();
   }
 
+  function drawStroke(s) {
+    if (!s || !s.length) return;
+    var w = canvas.width, h = canvas.height;
+    if (s.length === 1) {
+      ctx.beginPath();
+      ctx.arc(s[0][0] * w, s[0][1] * h, ctx.lineWidth / 2, 0, 7);
+      ctx.fillStyle = ctx.strokeStyle;
+      ctx.fill();
+      return;
+    }
+    ctx.beginPath();
+    ctx.moveTo(s[0][0] * w, s[0][1] * h);
+    for (var i = 1; i < s.length; i++) ctx.lineTo(s[i][0] * w, s[i][1] * h);
+    ctx.stroke();
+  }
+
   function redraw() {
     var w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
@@ -69,19 +85,8 @@
     ctx.lineWidth = Math.max(2, w / 300);
     ctx.strokeStyle = getComputedStyle(document.documentElement)
       .getPropertyValue("--ink").trim() || "#1a1a1a";
-    strokes.forEach(function (s) {
-      if (s.length < 2) return;
-      ctx.beginPath();
-      ctx.moveTo(s[0][0] * w, s[0][1] * h);
-      for (var i = 1; i < s.length; i++) ctx.lineTo(s[i][0] * w, s[i][1] * h);
-      ctx.stroke();
-    });
-    if (current && current.length === 1) {
-      ctx.beginPath();
-      ctx.arc(current[0][0] * w, current[0][1] * h, ctx.lineWidth / 2, 0, 7);
-      ctx.fillStyle = ctx.strokeStyle;
-      ctx.fill();
-    }
+    strokes.forEach(drawStroke);
+    if (current) drawStroke(current);
   }
 
   function pos(e) {
