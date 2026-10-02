@@ -31,10 +31,6 @@
         <span>Home</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5L12 3.8l8.5 6.7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg>
       </a>
-      <a href="#writing" class="nav-item" data-spy="writing">
-        <span>Writing</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h9.5L19 7v13.5H6z"/><path d="M15 3.5V7.5h4.5"/><path d="M9 11.5h6M9 14.5h6M9 17.5h4"/></svg>
-      </a>
       <a href="#stuff" class="nav-item" data-spy="stuff">
         <span>Stuff</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7.5" width="17" height="12.5" rx="2"/><path d="M8.5 7.5V6a2 2 0 012-2h3a2 2 0 012 2v1.5"/><path d="M3.5 12.5h17"/></svg>
@@ -65,21 +61,13 @@
     </header>
 
     <ul class="story">
-      <li>School student. My parents want me studying for IIT and boards. I build instead. First revenue is my leverage.</li>
+      <li>School student in Bengaluru. I build software constantly — zero budget, laptop and phone, that is the whole stack.</li>
       <li>Started with browser extensions. <a class="hash-link" href="https://github.com/pratham-jain33">VoiceMail Pro</a> drafts emails fast (~200 users). <a class="hash-link" href="https://github.com/pratham-jain33">Carbolt</a> makes your carbon footprint visible across food, water, and fuel (~600 users).</li>
       <li>Built Bolo, a voice layer for Windows. Then pivoted it into <a class="hash-link" href="https://github.com/pratham-jain33/Bolo">Bolo Doctor</a> — voice-based patient notes for small clinics, dictated in Hindi, Kannada, Hinglish, or English.</li>
       <li>Built <a class="hash-link" href="https://keysync-23c2.onrender.com">KeySync</a> because I could never learn the left hand from piano tutorials. Paste a YouTube link, get falling notes, practice with mic wait-mode.</li>
       <li>Ship MCP servers for fun: <a class="hash-link" href="https://github.com/pratham-jain33/hackerearth-mcp">hackerearth-mcp</a> gives any AI assistant a code run button in 24 languages; <a class="hash-link" href="https://github.com/pratham-jain33/security-mcp">security-mcp</a> grades website security and explains CVEs in plain English.</li>
       <li>Operating model: build constantly, ship constantly. Restless by default.</li>
     </ul>
-
-    <section id="writing" class="section">
-      <h2 class="section-label">Writing</h2>
-      <p class="writing-note">No blog. I build in public — find the running commentary on
-        <a class="hash-link" href="https://x.com/prathamjain33">X</a> and
-        <a class="hash-link" href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
-      </p>
-    </section>
 
     <section id="stuff" class="section">
       <h2 class="section-label">Stuff</h2>
@@ -141,7 +129,7 @@
         items.forEach(function (el) { el.classList.toggle('active', el.getAttribute('data-spy') === id); });
       }
       if ('IntersectionObserver' in window) {
-        var sections = ['writing', 'stuff', 'guestbook'].map(function (id) { return document.getElementById(id); });
+        var sections = ['stuff', 'guestbook'].map(function (id) { return document.getElementById(id); });
         var obs = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) setActive(e.target.id);
