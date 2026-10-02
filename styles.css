@@ -40,7 +40,7 @@ body {
 
 /* ---- custom cursor: hide native on fine pointers ---- */
 @media (pointer: fine) {
-  body, body a, body button, body input, body textarea {
+  body, body a, body button, body input, body textarea, body canvas {
     cursor: none;
   }
 }
@@ -277,7 +277,8 @@ h1 {
   border-radius: 12px;
   background: var(--card);
   touch-action: none;
-  cursor: crosshair;
+  user-select: none;
+  -webkit-user-select: none;
 }
 #gb-canvas:focus {
   outline: 2px solid var(--accent);

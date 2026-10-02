@@ -95,7 +95,6 @@
   function round3(n) { return Math.round(n * 1000) / 1000; }
 
   canvas.addEventListener("pointerdown", function (e) {
-    e.preventDefault();
     canvas.setPointerCapture(e.pointerId);
     drawing = true;
     current = [pos(e).map(round3)];
@@ -104,7 +103,6 @@
 
   canvas.addEventListener("pointermove", function (e) {
     if (!drawing || !current) return;
-    e.preventDefault();
     var pts = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
     for (var i = 0; i < pts.length; i++) {
       if (current.length >= MAX_POINTS) break;
