@@ -15,7 +15,10 @@
     <div>
       <span class="badge"><span class="dot"></span>Open source · PyPI</span>
       <h1>Give your AI a <span class="hl">run button.</span></h1>
-      <p class="sub">💻 hackerearth-mcp plugs into Claude Desktop (or any MCP client) and adds one tool: <span class="mono">run_code</span>. Your AI writes code, runs it in HackerEarth's sandbox, sees the output, fixes its mistakes. 24 languages. No setup beyond a free API key.</p>
+      <p class="sub"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" />
+  <path d="M20.054 15.987H3.946" />
+</svg> hackerearth-mcp plugs into Claude Desktop (or any MCP client) and adds one tool: <span class="mono">run_code</span>. Your AI writes code, runs it in HackerEarth's sandbox, sees the output, fixes its mistakes. 24 languages. No setup beyond a free API key.</p>
       <div class="cta-row">
         <a class="btn" href="https://pypi.org/project/hackerearth-mcp/">Install from PyPI</a>
         <a class="btn btn-ghost" href="https://github.com/pratham-jain33/hackerearth-mcp">GitHub</a>
@@ -32,11 +35,15 @@
 <span class="k">→ run_code</span>(language="python",
   source="print(sum(range(101)))")
 
-<span class="a">✓ output:</span> 5050
+<span class="a"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 6 9 17l-5-5" />
+</svg> output:</span> 5050
 <span class="k">→ run_code</span>(language="rust",
   source="fn main()…")
 
-<span class="a">✓ output:</span> compiled in 0.8s</div>
+<span class="a"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 6 9 17l-5-5" />
+</svg> output:</span> compiled in 0.8s</div>
     </div>
   </header>
 </div>
@@ -48,7 +55,9 @@
     <div class="features">
       <div class="feature">
         <div class="tag">// run_code</div>
-        <h3>▶️ Execute anything</h3>
+        <h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+</svg> Execute anything</h3>
         <p>Send source code, get stdout, stderr, and timing back. Python to Rust to Haskell.</p>
         <ul>
           <li>24 languages via HackerEarth's sandbox</li>
@@ -58,7 +67,12 @@
       </div>
       <div class="feature">
         <div class="tag">// list_languages</div>
-        <h3>📜 Know what's available</h3>
+        <h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15 12h-5" />
+  <path d="M15 8h-5" />
+  <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+  <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" />
+</svg> Know what's available</h3>
         <p>Ask what languages the sandbox supports before writing a line.</p>
         <ul>
           <li>Version info for every language</li>
@@ -67,7 +81,9 @@
       </div>
       <div class="feature">
         <div class="tag">// five-minute-setup</div>
-        <h3>⚡ Install in one command</h3>
+        <h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+</svg> Install in one command</h3>
         <p>pip install, paste your free HackerEarth key, add one JSON block to Claude Desktop.</p>
         <ul>
           <li class="mono">pip install hackerearth-mcp</li>
@@ -84,9 +100,22 @@
     <h2>How it works</h2>
     <p class="lede">From zero to running code inside your AI in three steps.</p>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>📦 Install</h3><p class="mono">pip install hackerearth-mcp</p></div>
-      <div class="step"><div class="n">2</div><h3>🔑 Key</h3><p>Grab a free HackerEarth API key. Set it once.</p></div>
-      <div class="step"><div class="n">3</div><h3>🔌 Plug in</h3><p>Add the server to Claude Desktop's config. Ask it to run something.</p></div>
+      <div class="step"><div class="n">1</div><h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+  <path d="M12 22V12" />
+  <polyline points="3.29 7 12 12 20.71 7" />
+  <path d="m7.5 4.27 9 5.15" />
+</svg> Install</h3><p class="mono">pip install hackerearth-mcp</p></div>
+      <div class="step"><div class="n">2</div><h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+</svg> Key</h3><p>Grab a free HackerEarth API key. Set it once.</p></div>
+      <div class="step"><div class="n">3</div><h3><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22v-5" />
+  <path d="M15 8V2" />
+  <path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z" />
+  <path d="M9 8V2" />
+</svg> Plug in</h3><p>Add the server to Claude Desktop's config. Ask it to run something.</p></div>
     </div>
   </div>
 </section>
