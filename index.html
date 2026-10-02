@@ -96,15 +96,20 @@
 
     <section id="guestbook" class="section">
       <h2 class="section-label">Guestbook</h2>
-      <p>Say hi. Be nice.</p>
+      <p>Don't type it — sign it. Draw your signature, leave your mark.</p>
       <form id="guestbook-form" class="gb-form">
-        <input id="guestbook-name" type="text" placeholder="Your name" maxlength="40" autocomplete="off">
-        <textarea id="guestbook-message" placeholder="Your message" maxlength="500" rows="3"></textarea>
-        <button type="submit">Sign the guestbook</button>
+        <canvas id="gb-canvas" tabindex="0" aria-label="Draw your signature here"></canvas>
+        <div class="gb-form-row">
+          <input id="guestbook-name" type="text" placeholder="Your name" maxlength="40" autocomplete="off">
+          <button type="button" id="gb-clear" class="gb-btn-ghost">Clear</button>
+          <button type="submit">Sign</button>
+        </div>
         <p id="guestbook-status" class="gb-status" role="status"></p>
       </form>
-      <ul id="guestbook-entries" class="gb-entries"></ul>
-      <p id="guestbook-empty" class="gb-empty">No entries yet. Yours could be first.</p>
+      <div id="gb-wall" class="gb-wall">
+        <div id="gb-tip" class="gb-tip" hidden></div>
+      </div>
+      <p id="guestbook-empty" class="gb-empty">No signatures yet. Yours could be first.</p>
     </section>
 
     <footer class="footer">
