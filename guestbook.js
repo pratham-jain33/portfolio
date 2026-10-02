@@ -313,7 +313,7 @@
     firebase.initializeApp({
       apiKey: FIREBASE_API_KEY,
       authDomain: "portfolio-b0516.firebaseapp.com",
-      databaseURL: "https://portfolio-b0516-default-rtdb.firebaseio.com",
+      databaseURL: "https://portfolio-b0516-default-rtdb.asia-southeast1.firebasedatabase.app",
       projectId: "portfolio-b0516",
       storageBucket: "portfolio-b0516.firebasestorage.app",
       messagingSenderId: "10002392412",
