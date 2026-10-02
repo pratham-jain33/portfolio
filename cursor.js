@@ -1,57 +1,49 @@
-/* Subtle custom cursor: small dot + trailing ring that grows over links.
-   Disabled on touch devices and when the user prefers reduced motion. */
+/* Custom cursor: blue arrow that morphs into a pulsing ring over links.
+   Disabled on touch devices; pulse animation off for prefers-reduced-motion. */
 (function () {
+  "use strict";
   var fine = window.matchMedia("(pointer: fine)").matches;
+  if (!fine) return;
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!fine || reduced) return;
 
-  var dot = document.getElementById("cursor-dot");
-  var ring = document.getElementById("cursor-ring");
-  if (!dot || !ring) return;
+  var arrow = document.querySelector(".cursor-arrow");
+  var ring = document.querySelector(".cursor-ring");
+  if (!arrow || !ring) return;
 
-  var mx = -100, my = -100, rx = -100, ry = -100;
-  var active = false;
+  var mx = -100, my = -100;   // mouse
+  var ax = -100, ay = -100;   // arrow (snappy)
+  var rx = -100, ry = -100;   // ring (laggy)
+  var hovering = false;
 
   document.addEventListener("mousemove", function (e) {
-    mx = e.clientX;
-    my = e.clientY;
-    if (!active) {
-      active = true;
-      document.body.classList.add("cursor-active", "custom-cursor");
-      rx = mx;
-      ry = my;
+    mx = e.clientX; my = e.clientY;
+    var t = e.target;
+    var hot = t && t.closest && t.closest("a, button, input, textarea, .nav-item");
+    var now = !!hot;
+    if (now !== hovering) {
+      hovering = now;
+      document.body.classList.toggle("cursor-hover", now);
     }
-    dot.style.transform = "translate(" + (mx - 3) + "px," + (my - 3) + "px)";
-  });
+  }, { passive: true });
 
   document.addEventListener("mouseleave", function () {
-    active = false;
-    document.body.classList.remove("cursor-active", "custom-cursor");
+    mx = my = ax = ay = rx = ry = -100;
   });
 
-  // Trailing ring via rAF lerp.
-  function tick() {
-    if (active) {
-      rx += (mx - rx) * 0.16;
-      ry += (my - ry) * 0.16;
-      var half = ring.offsetWidth / 2;
-      ring.style.transform = "translate(" + (rx - half) + "px," + (ry - half) + "px)";
+  function frame() {
+    if (reduced) {
+      ax = mx; ay = my; rx = mx; ry = my;
+    } else {
+      ax += (mx - ax) * 0.55;
+      ay += (my - ay) * 0.55;
+      rx += (mx - rx) * 0.22;
+      ry += (my - ry) * 0.22;
     }
-    requestAnimationFrame(tick);
+    arrow.style.transform = "translate(" + (ax - 2) + "px," + (ay - 2) + "px)";
+    // ring is centered via CSS translate(-50%,-50%) on an inner offset:
+    ring.style.left = rx + "px";
+    ring.style.top = ry + "px";
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
-
-  // Grow the ring over interactive elements.
-  document.addEventListener("mouseover", function (e) {
-    var t = e.target;
-    if (t && t.closest && t.closest("a, button, input, textarea")) {
-      document.body.classList.add("cursor-hover");
-    }
-  });
-  document.addEventListener("mouseout", function (e) {
-    var t = e.target;
-    if (t && t.closest && t.closest("a, button, input, textarea")) {
-      document.body.classList.remove("cursor-hover");
-    }
-  });
+  requestAnimationFrame(frame);
 })();

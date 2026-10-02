@@ -1,113 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pratham Jain</title>
-<meta name="description" content="Pratham Jain — solo builder and student in Bengaluru. I build things and write about it in public.">
-<link rel="stylesheet" href="styles.css">
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratham Jain</title>
+  <meta name="description" content="Pratham Jain — solo builder and school student in Bengaluru. I build software constantly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
-<body>
+<body id="top">
 
-<main class="page">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-arrow" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M5 3l14 7.5L12.5 12 11 19.5 5 3z" fill="#2f6bff" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
-  <h1>Pratham Jain</h1>
+  <aside class="sidebar">
+    <nav>
+      <a href="#top" class="nav-item active" data-spy="top">
+        <span>Home</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5L12 3.8l8.5 6.7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg>
+      </a>
+      <a href="#writing" class="nav-item" data-spy="writing">
+        <span>Writing</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h9.5L19 7v13.5H6z"/><path d="M15 3.5V7.5h4.5"/><path d="M9 11.5h6M9 14.5h6M9 17.5h4"/></svg>
+      </a>
+      <a href="#stuff" class="nav-item" data-spy="stuff">
+        <span>Stuff</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7.5" width="17" height="12.5" rx="2"/><path d="M8.5 7.5V6a2 2 0 012-2h3a2 2 0 012 2v1.5"/><path d="M3.5 12.5h17"/></svg>
+      </a>
+      <a href="#guestbook" class="nav-item" data-spy="guestbook">
+        <span>Guestbook</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3.5L10.5 14"/><path d="M21 3.5l-6.8 18-3.7-7.5L3 10.3z"/></svg>
+      </a>
+    </nav>
+  </aside>
 
-  <p class="bio">
-    Solo builder and school student in Bengaluru. I build software on a laptop
-    and a phone with zero budget, and I build in public on
-    <a href="https://x.com/prathamjain33">X</a> and
-    <a href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
-  </p>
+  <main class="content">
+    <header class="hero">
+      <p class="name-label">Pratham Jain</p>
+      <h1>I build <span class="grad">software</span> constantly.</h1>
+      <p class="intro">
+        Solo builder and school student in Bengaluru. I build software on a laptop and a phone
+        with zero budget, and I build in public on
+        <a class="hash-link" href="https://x.com/prathamjain33">X</a> and
+        <a class="hash-link" href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
+      </p>
+      <div class="socials">
+        <a href="https://github.com/pratham-jain33" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://x.com/prathamjain33" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="https://www.linkedin.com/in/prathamjain33" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="mailto:hello@prathamjain.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a>
+      </div>
+    </header>
 
-  <ul class="timeline">
-    <li>School student. My parents want me studying for IIT and boards. I build instead. First revenue is my leverage.</li>
-    <li>Started with browser extensions. <strong>VoiceMail Pro</strong> drafts emails fast (~200 users). <strong>Carbolt</strong> makes your carbon footprint visible across food, water, and fuel (~600 users).</li>
-    <li>Built <strong>Bolo</strong>, a voice layer for Windows. Then pivoted it into <strong>Bolo Doctor</strong> — voice-based patient notes for small clinics, dictated in Hindi, Kannada, Hinglish, or English.</li>
-    <li>Built <strong>KeySync</strong> because I could never learn the left hand from piano tutorials. Paste a YouTube link, get falling notes, practice with mic wait-mode.</li>
-    <li>Ship MCP servers for fun: <strong>hackerearth-mcp</strong> gives any AI assistant a code run button in 24 languages; <strong>security-mcp</strong> grades website security and explains CVEs in plain English.</li>
-    <li>Operating model: build constantly, ship constantly. Restless by default.</li>
-  </ul>
+    <ul class="story">
+      <li>School student. My parents want me studying for IIT and boards. I build instead. First revenue is my leverage.</li>
+      <li>Started with browser extensions. <a class="hash-link" href="https://github.com/pratham-jain33">VoiceMail Pro</a> drafts emails fast (~200 users). <a class="hash-link" href="https://github.com/pratham-jain33">Carbolt</a> makes your carbon footprint visible across food, water, and fuel (~600 users).</li>
+      <li>Built Bolo, a voice layer for Windows. Then pivoted it into <a class="hash-link" href="https://github.com/pratham-jain33/Bolo">Bolo Doctor</a> — voice-based patient notes for small clinics, dictated in Hindi, Kannada, Hinglish, or English.</li>
+      <li>Built <a class="hash-link" href="https://keysync-23c2.onrender.com">KeySync</a> because I could never learn the left hand from piano tutorials. Paste a YouTube link, get falling notes, practice with mic wait-mode.</li>
+      <li>Ship MCP servers for fun: <a class="hash-link" href="https://github.com/pratham-jain33/hackerearth-mcp">hackerearth-mcp</a> gives any AI assistant a code run button in 24 languages; <a class="hash-link" href="https://github.com/pratham-jain33/security-mcp">security-mcp</a> grades website security and explains CVEs in plain English.</li>
+      <li>Operating model: build constantly, ship constantly. Restless by default.</li>
+    </ul>
 
-  <h2>Stuff</h2>
+    <section id="writing" class="section">
+      <h2 class="section-label">Writing</h2>
+      <p class="writing-note">No blog. I build in public — find the running commentary on
+        <a class="hash-link" href="https://x.com/prathamjain33">X</a> and
+        <a class="hash-link" href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
+      </p>
+    </section>
 
-  <ul class="stuff">
-    <li>
-      <a href="https://github.com/pratham-jain33/Bolo">Bolo Doctor</a>
-      — voice-based patient notes for small Indian clinics. Doctor dictates, gets a clean note.
-    </li>
-    <li>
-      <a href="https://keysync-23c2.onrender.com">KeySync</a>
-      — learn piano from YouTube tutorials. Falling notes plus mic wait-mode practice.
-      (<a href="https://github.com/pratham-jain33/keysync">github</a>)
-    </li>
-    <li>
-      <a href="https://github.com/pratham-jain33/hackerearth-mcp">hackerearth-mcp</a>
-      — run code in 24 languages from any AI assistant.
-      (<a href="https://pypi.org/project/hackerearth-mcp/">pypi</a>)
-    </li>
-    <li>
-      <a href="https://github.com/pratham-jain33/security-mcp">security-mcp</a>
-      — audit a site's security, check CVEs, MITRE ATT&amp;CK defenses in plain English.
-      (<a href="https://pypi.org/project/security-mcp/">pypi</a>)
-    </li>
-    <li>
-      <strong>VoiceMail Pro</strong>
-      — browser extension for quick email drafts. ~200 users.
-    </li>
-    <li>
-      <strong>Carbolt</strong>
-      — see your carbon footprint across food, water, and fuel. ~600 users.
-    </li>
-    <li>
-      Older experiments, still hosted here:
-      <a href="projects/mocode/">mocode</a>,
-      <a href="projects/utransfer/">utransfer</a>,
-      <a href="projects/volume-master-max/">volume-master-max</a>,
-      <a href="projects/whisper/">whisper</a>.
-    </li>
-  </ul>
+    <section id="stuff" class="section">
+      <h2 class="section-label">Stuff</h2>
+      <div class="stuff-list">
+        <p><a class="row-link" href="https://github.com/pratham-jain33/Bolo"><strong>Bolo Doctor</strong></a> <span class="dash">—</span> <span class="muted">voice-based patient notes for small Indian clinics. Doctor dictates, gets a clean note.</span></p>
+        <p><a class="row-link" href="https://keysync-23c2.onrender.com"><strong>KeySync</strong></a> <span class="dash">—</span> <span class="muted">learn piano from YouTube tutorials. Falling notes plus mic wait-mode practice.</span> <span class="sub-links">(<a class="hash-link" href="https://github.com/pratham-jain33/keysync">github</a>)</span></p>
+        <p><a class="row-link" href="https://github.com/pratham-jain33/hackerearth-mcp"><strong>hackerearth-mcp</strong></a> <span class="dash">—</span> <span class="muted">run code in 24 languages from any AI assistant.</span> <span class="sub-links">(<a class="hash-link" href="https://pypi.org/project/hackerearth-mcp/">pypi</a>)</span></p>
+        <p><a class="row-link" href="https://github.com/pratham-jain33/security-mcp"><strong>security-mcp</strong></a> <span class="dash">—</span> <span class="muted">audit a site's security, check CVEs, MITRE ATT&amp;CK defenses in plain English.</span> <span class="sub-links">(<a class="hash-link" href="https://pypi.org/project/security-mcp/">pypi</a>)</span></p>
+        <p><a class="row-link" href="https://github.com/pratham-jain33"><strong>VoiceMail Pro</strong></a> <span class="dash">—</span> <span class="muted">browser extension for quick email drafts. ~200 users.</span></p>
+        <p><a class="row-link" href="https://github.com/pratham-jain33"><strong>Carbolt</strong></a> <span class="dash">—</span> <span class="muted">see your carbon footprint across food, water, and fuel. ~600 users.</span></p>
+        <p class="older">Older experiments, still hosted here:
+          <a class="hash-link" href="projects/mocode/">mocode</a>,
+          <a class="hash-link" href="projects/utransfer/">utransfer</a>,
+          <a class="hash-link" href="projects/volume-master-max/">volume-master-max</a>,
+          <a class="hash-link" href="projects/whisper/">whisper</a>.
+        </p>
+      </div>
+    </section>
 
-  <h2>Writing</h2>
+    <section class="section contrib">
+      <div class="contrib-card">
+        <img src="https://ghchart.rshah.org/2f6bff/prathamjain33" alt="Pratham Jain's GitHub contribution graph" loading="lazy">
+      </div>
+      <p class="caption">(yes, I still code as a student)</p>
+    </section>
 
-  <p>
-    No blog. I build in public — find the running commentary on
-    <a href="https://x.com/prathamjain33">X</a> and
-    <a href="https://www.linkedin.com/in/prathamjain33">LinkedIn</a>.
-  </p>
+    <section id="guestbook" class="section">
+      <h2 class="section-label">Guestbook</h2>
+      <p>Say hi. Be nice.</p>
+      <form id="guestbook-form" class="gb-form">
+        <input id="guestbook-name" type="text" placeholder="Your name" maxlength="40" autocomplete="off">
+        <textarea id="guestbook-message" placeholder="Your message" maxlength="500" rows="3"></textarea>
+        <button type="submit">Sign the guestbook</button>
+        <p id="guestbook-status" class="gb-status" role="status"></p>
+      </form>
+      <ul id="guestbook-entries" class="gb-entries"></ul>
+      <p id="guestbook-empty" class="gb-empty">No entries yet. Yours could be first.</p>
+    </section>
 
-  <h2>Guestbook</h2>
+    <footer class="footer">
+      <a class="row-link" href="#guestbook">Sign my guestbook</a>
+      <span class="footer-socials">
+        <a class="hash-link" href="https://github.com/pratham-jain33">github</a> ·
+        <a class="hash-link" href="https://x.com/prathamjain33">x</a> ·
+        <a class="hash-link" href="https://www.linkedin.com/in/prathamjain33">linkedin</a>
+      </span>
+    </footer>
+  </main>
 
-  <p class="muted">Say hi. Be nice.</p>
-
-  <form id="guestbook-form" class="guestbook-form" autocomplete="off">
-    <input id="guestbook-name" type="text" maxlength="40" placeholder="your name" required>
-    <textarea id="guestbook-message" maxlength="500" rows="3" placeholder="your message" required></textarea>
-    <button type="submit">sign the guestbook</button>
-    <p id="guestbook-status" class="muted small" aria-live="polite"></p>
-  </form>
-
-  <ul id="guestbook-entries" class="guestbook-entries"></ul>
-  <p id="guestbook-empty" class="muted">No entries yet. Yours could be first.</p>
-
-  <footer>
-    <p>
-      <a href="https://github.com/pratham-jain33">github</a> ·
-      <a href="https://x.com/prathamjain33">x</a> ·
-      <a href="https://www.linkedin.com/in/prathamjain33">linkedin</a>
-    </p>
-    <img class="ghchart" src="https://ghchart.rshah.org/pratham-jain33" alt="Pratham's GitHub contribution graph" loading="lazy">
-    <p class="muted small">(yes, I still code as a student)</p>
-  </footer>
-
-</main>
-
-<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
-
-<script src="cursor.js"></script>
-<script src="guestbook.js"></script>
+  <script src="cursor.js"></script>
+  <script src="guestbook.js"></script>
+  <script>
+    // Scroll-spy for sidebar nav
+    (function () {
+      var items = document.querySelectorAll('.nav-item[data-spy]');
+      var map = {};
+      items.forEach(function (el) { map[el.getAttribute('data-spy')] = el; });
+      function setActive(id) {
+        items.forEach(function (el) { el.classList.toggle('active', el.getAttribute('data-spy') === id); });
+      }
+      if ('IntersectionObserver' in window) {
+        var sections = ['writing', 'stuff', 'guestbook'].map(function (id) { return document.getElementById(id); });
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) setActive(e.target.id);
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(function (s) { if (s) obs.observe(s); });
+        window.addEventListener('scroll', function () {
+          if (window.scrollY < 200) setActive('top');
+        }, { passive: true });
+      }
+    })();
+  </script>
 </body>
 </html>
