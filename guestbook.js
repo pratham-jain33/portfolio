@@ -230,7 +230,7 @@
     wall.appendChild(tip);
     wallItems = [];
     var keys = Object.keys(entries || {}).sort(function (a, b) {
-      return (entries[a].ts || 0) - (entries[b].ts || 0);
+      return (entries[b].ts || 0) - (entries[a].ts || 0); // newest first
     });
     keys.forEach(function (k) {
       var entry = entries[k];
